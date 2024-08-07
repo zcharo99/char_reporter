@@ -7,7 +7,7 @@ def title(style: str):
         return
     
     if style == styles[1]:
-        print("char_reporter")
+        print("char_reporter\n")
 
 def choices(style: str, choicearray: List[str]) -> None:
     styles = ["square_brackets", "dot"]
@@ -20,5 +20,8 @@ def choices(style: str, choicearray: List[str]) -> None:
         result = '\n'.join(square_bracketed_strings)
         print(result)
 
-def menu():
+    if style == styles[1]:
+        square_bracketed_strings = [f"{i+1}. {string}" for i, string in enumerate(choicearray)]
+        result = '\n'.join(square_bracketed_strings)
+        print(result)
     
